@@ -14,7 +14,8 @@ Note: SAP Transformation and AI Intelligent Automation have a natural degree of 
 - Use clear, business-focused language.
 - Structure internal content around the three pillars; present to customers as a seamless, integrated offering.
 - When SAP is mentioned as a separate topic, explicitly include AI automation potential in the same context when relevant.
-- In combined offering phrasing, prefer "SAP, AI, or Real Estate" (not "and Real Estate") to reflect that Real Estate is typically positioned separately.
+- In capability statements about BlueWater Strategy, use AND framing (we deliver SAP, AI, and Real Estate).
+- In customer-choice or solution-scoping language, use OR framing (customers can choose SAP, AI, or Real Estate based on need).
 - Prefer consistent capitalization: Real Estate, SAP HANA, BW/4HANA, S/4HANA, SAC.
 - Avoid exaggerated claims unless verified with data.
 - Keep paragraphs short for readability on desktop and mobile.
