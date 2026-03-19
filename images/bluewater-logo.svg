@@ -1,6 +1,0 @@
-<svg width="120" height="48" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="120" height="48" rx="12" fill="#0f4f8a"/>
-  <text x="60" y="28" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="bold" fill="#e2ecf9">BlueWater</text>
-  <text x="60" y="42" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="bold" fill="#81c7ee">Strategy</text>
-  <path d="M20 36 Q40 28 60 36 Q80 44 100 36" stroke="#81c7ee" stroke-width="3" fill="none"/>
-</svg>

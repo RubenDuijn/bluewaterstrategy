@@ -49,6 +49,12 @@ Note: SAP Transformation and AI Intelligent Automation have a natural degree of 
 - Check spelling and capitalization consistency.
 - Confirm local preview works before publishing.
 
+## Hosting and Domain
+- The domain http://bluewaterstrategy.ch is registered with Hostpoint.
+- The website project is linked to GitHub at https://github.com/RubenDuijn/bluewaterstrategy.
+- Keep deployment guidance aligned with the current publishing approach and domain configuration.
+- Do not assume a hosting provider change unless explicitly confirmed.
+
 ## Change Management Rules
 - Make small, focused edits and avoid scope creep.
 - Preserve existing structure unless a redesign is explicitly requested.
