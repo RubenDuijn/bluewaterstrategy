@@ -12,6 +12,11 @@
   <link rel="canonical" href="https://bluewaterstrategy.ch/" />
   <meta property="og:image" content="http://bluewaterstrategy.ch/bluewaterstrategy-website/images/Schweiz.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <script>
+    if (window.location.pathname.startsWith('/bluewaterstrategy-website')) {
+      try { window.history.replaceState({}, '', '/'); } catch (e) {}
+    }
+  </script>
   <style>
     :root {
       --bg: #f2f4f7;
