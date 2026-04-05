@@ -13,67 +13,67 @@
   <meta name="twitter:card" content="summary_large_image" />
   <style>
     :root {
-      --bg: #f5f6f8;
-      --surface: rgba(255,255,255,.96);
+      --bg: #f2f4f7;
+      --surface: rgba(255,255,255,.97);
       --primary: #123f6d;
-      --primary-strong: #0f3155;
-      --dark: #142031;
-      --gray: #5d6d7f;
-      --muted: #99a5b3;
-      --line: #dde4ec;
-      --shadow: 0 14px 34px rgba(17, 30, 45, 0.06);
-      --shadow-strong: 0 22px 48px rgba(17, 30, 45, 0.10);
+      --primary-strong: #0d3157;
+      --dark: #101c2b;
+      --gray: #59697b;
+      --muted: #95a2b1;
+      --line: #d7e0e9;
+      --shadow: 0 12px 30px rgba(15, 28, 42, 0.05);
+      --shadow-strong: 0 18px 42px rgba(15, 28, 42, 0.09);
     }
     html { scroll-behavior: smooth; }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      line-height: 1.5;
+      line-height: 1.55;
       color: var(--dark);
       background:
-        radial-gradient(circle at top right, rgba(70, 102, 142, 0.08), transparent 0 24%),
-        linear-gradient(180deg, #fbfcfd 0%, var(--bg) 100%);
+        radial-gradient(circle at top right, rgba(48, 84, 128, 0.08), transparent 0 24%),
+        linear-gradient(180deg, #fcfdfe 0%, var(--bg) 100%);
     }
-    .container { width: min(1120px, 94%); margin: 0 auto; }
+    .container { width: min(1080px, 92%); margin: 0 auto; }
     section { position: relative; }
-    h2 { letter-spacing: -0.02em; }
+    h2 { letter-spacing: -0.028em; font-size: clamp(1.55rem, 3vw, 2.2rem); line-height: 1.12; }
     header {
-      background: rgba(255, 255, 255, 0.88);
-      border-bottom: 1px solid rgba(219, 228, 239, 0.92);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 10px 26px rgba(10, 28, 49, 0.035);
+      background: rgba(255, 255, 255, 0.82);
+      border-bottom: 1px solid rgba(215, 224, 234, 0.95);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 10px 28px rgba(10, 28, 49, 0.03);
       position: sticky;
       top: 0;
       z-index: 20;
-      padding: 0.8rem 0;
+      padding: 0.85rem 0;
     }
-    .brand { font-weight: 800; color: var(--primary); font-size: 1.08rem; letter-spacing: 0.03em; position: relative; z-index: 2; }
+    .brand { font-weight: 800; color: var(--primary); font-size: 1.04rem; letter-spacing: 0.06em; position: relative; z-index: 2; }
     .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 0.85rem 1rem; flex-wrap: wrap; }
     .header-controls { display: flex; align-items: center; gap: 0.55rem; order: 3; }
     nav { float: none; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.35rem; margin-left: auto; order: 2; }
     nav a {
       text-decoration: none;
-      color: #24364c;
+      color: #213349;
       margin-left: 0;
-      padding: 0.42rem 0.72rem;
+      padding: 0.44rem 0.74rem;
       border-radius: 999px;
-      font-size: 0.93rem;
+      font-size: 0.92rem;
       transition: background .2s ease, color .2s ease, transform .2s ease;
       display: inline-flex;
       align-items: center;
     }
-    nav a:hover { background: rgba(33,73,120,.07); color: var(--primary); transform: translateY(-1px); }
+    nav a:hover { background: rgba(18,63,109,.06); color: var(--primary); transform: translateY(-1px); }
     .lang-switcher {
       display: inline-flex;
       align-items: center;
       gap: 0.15rem;
       padding: 0.18rem;
       border-radius: 999px;
-      border: 1px solid #dbe3eb;
+      border: 1px solid #d6e0ea;
       background: rgba(255,255,255,.92);
-      box-shadow: 0 8px 18px rgba(17,30,45,.04);
+      box-shadow: 0 6px 16px rgba(17,30,45,.035);
     }
     .lang-btn {
       border: 0;
@@ -96,14 +96,14 @@
       width: 44px;
       height: 44px;
       border-radius: 999px;
-      border: 1px solid #dbe3eb;
+      border: 1px solid #d6e0ea;
       background: rgba(255,255,255,.94);
       align-items: center;
       justify-content: center;
       flex-direction: column;
       gap: 4px;
       cursor: pointer;
-      box-shadow: 0 8px 18px rgba(17,30,45,.04);
+      box-shadow: 0 6px 16px rgba(17,30,45,.035);
     }
     .menu-toggle span {
       width: 18px;
@@ -116,49 +116,49 @@
     .menu-toggle.is-open span:nth-child(2) { opacity: 0; }
     .menu-toggle.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
     .hero {
-      background: linear-gradient(135deg, #fcfcfd 0%, #f3f5f8 52%, #e9eef4 100%);
+      background: linear-gradient(135deg, #fbfcfe 0%, #f2f5f8 54%, #e7edf4 100%);
       color: var(--dark);
-      padding: 4.9rem 0 3.9rem;
+      padding: 5.25rem 0 4.15rem;
       position: relative;
       overflow: hidden;
-      border-bottom: 1px solid #dfe5ec;
+      border-bottom: 1px solid #dae2ea;
     }
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at top right, rgba(79, 116, 162, 0.10), transparent 0 28%),
+        radial-gradient(circle at top right, rgba(60, 96, 140, 0.10), transparent 0 28%),
         linear-gradient(180deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,0) 100%);
       pointer-events: none;
     }
     .grid { display: grid; gap: 1.5rem; }
-    .hero-content { max-width: 540px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1; }
-    .hero h1 { font-size: clamp(1.95rem, 4.2vw, 2.8rem); line-height: 1.12; margin: 0 0 1.1rem; color: #13253a; letter-spacing: -0.02em; }
-    .hero p { margin: 1rem 0 1.5rem; color: #56677f; font-size: 1.05rem; }
+    .hero-content { max-width: 560px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1; }
+    .hero h1 { font-size: clamp(2.05rem, 4.5vw, 3.1rem); line-height: 1.06; margin: 0 0 1.15rem; color: #0f2032; letter-spacing: -0.035em; }
+    .hero p { margin: 1rem 0 1.6rem; color: #526274; font-size: 1.04rem; }
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.8rem 1.5rem;
+      padding: 0.82rem 1.55rem;
       border-radius: 999px;
-      border: 1px solid rgba(18, 63, 109, 0.08);
+      border: 1px solid rgba(18, 63, 109, 0.10);
       font-weight: 700;
-      background: linear-gradient(135deg, #163f69 0%, #0f4f8a 100%);
+      background: linear-gradient(135deg, #14385d 0%, #0f4a80 100%);
       color: white;
       text-decoration: none;
-      box-shadow: 0 14px 30px rgba(17, 30, 45, 0.12);
+      box-shadow: 0 12px 28px rgba(17, 30, 45, 0.10);
       transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
     }
-    .button:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(17,30,45,.16); }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(17,30,45,.14); }
     .hero-chips { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.95rem; }
     .hero-chip {
       font-size: 0.8rem;
-      color: #36597d;
-      background: rgba(255,255,255,.86);
-      border: 1px solid #dbe4ee;
+      color: #2f587d;
+      background: rgba(255,255,255,.9);
+      border: 1px solid #d7e0ea;
       border-radius: 999px;
-      padding: 0.3rem 0.64rem;
+      padding: 0.32rem 0.66rem;
       backdrop-filter: blur(6px);
     }
     .badge {
@@ -166,23 +166,23 @@
       font-size: 0.74rem;
       text-transform: uppercase;
       letter-spacing: .12em;
-      color: #3c6187;
-      background: rgba(255,255,255,.9);
-      border: 1px solid #dce4ed;
+      color: #36597f;
+      background: rgba(255,255,255,.92);
+      border: 1px solid #d7e0ea;
       padding: 0.24rem 0.62rem;
       border-radius: 999px;
       margin-bottom: 0.95rem;
     }
-    .features { padding: 3.35rem 0 4rem; }
+    .features { padding: 3.8rem 0 4.6rem; }
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(247,249,251,.96) 100%);
-      border: 1px solid #dde4eb;
-      border-radius: 1.05rem;
-      padding: 1.35rem;
+      background: #fff;
+      border: 1px solid #dbe2ea;
+      border-radius: 1.12rem;
+      padding: 1.45rem;
       box-shadow: var(--shadow);
       transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
     }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 26px 56px rgba(17, 30, 45, 0.12); border-color: #d1dbe6; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 20px 42px rgba(15, 28, 42, 0.08); border-color: #cfd9e4; }
     .card img { width: 100%; height: 175px; object-fit: cover; object-position: center center; border-radius: .7rem; margin-bottom: 0.8rem; box-shadow: 0 14px 30px rgba(12, 34, 58, 0.10); }
     .hero-media { display: flex; flex-direction: column; gap: 0.7rem; position: relative; z-index: 1; }
     .hero-media .badge { margin-bottom: 0; align-self: flex-start; }
@@ -190,8 +190,8 @@
       position: relative;
       border-radius: 1rem;
       overflow: hidden;
-      border: 1px solid rgba(219, 229, 242, .95);
-      box-shadow: 0 24px 54px rgba(12, 30, 52, .16);
+      border: 1px solid rgba(213, 223, 236, .95);
+      box-shadow: 0 24px 56px rgba(12, 30, 52, .14);
     }
     .hero-image-wrap::after {
       content: "";
@@ -204,33 +204,33 @@
     .hero-subtext { margin: 0 0 1.05rem; color: #56677f; font-size: 1.03rem; line-height: 1.55; max-width: 58ch; }
     .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.25rem; }
     .button.secondary {
-      background: rgba(255,255,255,.9);
+      background: rgba(255,255,255,.92);
       color: var(--primary);
-      border: 1px solid #d9e1ea;
-      box-shadow: 0 8px 18px rgba(17,30,45,.04);
+      border: 1px solid #d7e0e9;
+      box-shadow: 0 6px 16px rgba(17,30,45,.035);
     }
-    .button.secondary:hover { background: rgba(255,255,255,.98); }
+    .button.secondary:hover { background: rgba(255,255,255,.99); }
     .availability-note { margin-top: 0.95rem; font-size: 0.94rem; color: #4f647d; }
     .availability-note strong { color: #13253a; }
     .profile-panel {
-      background: linear-gradient(135deg, rgba(255,255,255,.985) 0%, rgba(246,248,251,.95) 100%);
-      border: 1px solid #dde4ec;
+      background: linear-gradient(135deg, rgba(255,255,255,.99) 0%, rgba(244,247,250,.96) 100%);
+      border: 1px solid #dbe3eb;
       border-radius: 1.05rem;
-      padding: 1.45rem;
-      box-shadow: 0 18px 42px rgba(17, 30, 45, 0.06);
+      padding: 1.55rem;
+      box-shadow: 0 16px 38px rgba(15, 28, 42, 0.05);
     }
     .profile-grid { display: grid; gap: 1.25rem; align-items: center; }
-    .profile-photo-wrap { max-width: 340px; margin: 0 auto; border-radius: 0.95rem; overflow: hidden; box-shadow: 0 22px 50px rgba(15, 40, 80, .18); background: #fff; }
+    .profile-photo-wrap { max-width: 340px; margin: 0 auto; border-radius: 0.95rem; overflow: hidden; box-shadow: 0 18px 42px rgba(15, 40, 80, .14); background: #fff; }
     .profile-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 78% 28%; display: block; }
     .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; margin-top: 1rem; }
     .stat-card {
       background: rgba(255,255,255,.95);
-      border: 1px solid #dde5ed;
+      border: 1px solid #dbe3eb;
       border-radius: 0.9rem;
       padding: 0.95rem 1rem;
-      box-shadow: 0 12px 26px rgba(17, 30, 45, 0.035);
+      box-shadow: 0 10px 24px rgba(17, 30, 45, 0.03);
     }
-    .stat-card strong { display: block; color: #0f4f8a; margin-bottom: 0.2rem; }
+    .stat-card strong { display: block; color: #134b7f; margin-bottom: 0.2rem; }
     .hero .container.grid-2 { align-items: center; }
     .card h3 { margin: 0 0 .6rem; letter-spacing: -0.01em; }
     .card p { margin: 0; color: var(--gray); }
@@ -238,14 +238,14 @@
     #contact {
       position: relative;
       overflow: hidden;
-      background: linear-gradient(135deg, #fafbfd 0%, #f2f5f8 100%) !important;
-      border-top: 1px solid #dde5ec !important;
+      background: linear-gradient(135deg, #fbfcfd 0%, #f2f5f8 100%) !important;
+      border-top: 1px solid #dbe3eb !important;
     }
     #contact::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top right, rgba(79, 116, 162, 0.08), transparent 0 28%);
+      background: radial-gradient(circle at top right, rgba(60, 96, 140, 0.08), transparent 0 28%);
       pointer-events: none;
     }
     #contact .container { position: relative; z-index: 1; }
@@ -253,11 +253,11 @@
     #contact p { color: #5d6f86 !important; }
     footer {
       padding: 2rem 0;
-      color: #738093;
+      color: #6f7d8f;
       text-align: center;
       font-size: 0.9rem;
-      background: #f5f7fa;
-      border-top: 1px solid #dfe6ed;
+      background: #f4f6f8;
+      border-top: 1px solid #dbe3eb;
     }
     @media (min-width: 800px) {
       .grid-2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center; gap: 2.5rem; }
@@ -275,10 +275,10 @@
         padding: 0.7rem;
         flex-direction: column;
         align-items: stretch;
-        background: rgba(255,255,255,.97);
-        border: 1px solid #e5ddd1;
-        border-radius: 1rem;
-        box-shadow: 0 18px 36px rgba(17,30,45,.08);
+        background: rgba(255,255,255,.98);
+        border: 1px solid #dbe3eb;
+        border-radius: 1.05rem;
+        box-shadow: 0 16px 34px rgba(15,28,42,.06);
       }
       nav.is-open { display: flex; }
       nav a { width: 100%; }
@@ -405,7 +405,7 @@
   </section>
 
   <section class="container" style="padding: 0 0 2rem;">
-    <div class="profile-panel" style="background: linear-gradient(135deg, #f7fbff 0%, #edf4fc 100%); border-color:#d8e4f2;">
+    <div class="profile-panel" style="background: linear-gradient(135deg, #fbfcfe 0%, #f1f5fa 100%); border-color:#dbe4ee;">
       <h2 style="color: #192639; margin-top: 0; margin-bottom: 0.65rem;" data-i18n="directionHeading">When SAP gets complex, we step in</h2>
       <p style="margin: 0 0 0.9rem; color: #4f5f7b; max-width: 860px;" data-i18n="directionText">BlueWater Strategy is built for situations where reporting is unclear, planning is under strain, data flows are too manual, or a transformation program needs sharper technical leadership. The value comes from combining enterprise-grade SAP depth with hands-on execution across Business Warehouse, Planning, cloud-ready SAP extensions, and applied intelligence.</p>
       <div class="hero-chips" style="margin-top: 0;">
@@ -419,7 +419,7 @@
     </div>
   </section>
 
-  <section style="background: #eaf3fb; padding: 3rem 0;">
+  <section style="background: #eef3f7; padding: 3.25rem 0;">
     <div class="container">
       <h2 style="color: #192639; margin-bottom: 0.6rem;" data-i18n="resultsHeading">Results you can feel in the business</h2>
       <p style="margin: 0 0 1rem; color: #4f5f7b; max-width: 760px;" data-i18n="resultsIntro">Representative examples of the kinds of outcomes targeted in BW, SAC, reporting, planning, and architecture-heavy engagements.</p>
@@ -471,22 +471,22 @@
     <p style="margin: 0 0 1.25rem; color: #4f5f7b; max-width: 760px;" data-i18n="processIntro">Complex SAP work benefits from a structured, low-drama approach: diagnose quickly, design with intent, implement carefully, and keep improving.</p>
   </div>
 
-  <section class="container" style="padding: 2rem 0; margin-top: 0; scroll-margin-top: 100px; background: #f6fbff; border-top: 1px solid #d9e9f9; border-bottom: 1px solid #d9e9f9;">
+  <section class="container" style="padding: 2rem 0; margin-top: 0; scroll-margin-top: 100px; background: #f7f9fb; border-top: 1px solid #dbe4ec; border-bottom: 1px solid #dbe4ec;">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;" class="grid">
-      <div style="background:#fff;border:1px solid #d7e6f4;border-radius:0.6rem;padding:1rem;">
-        <strong style="color:#0f4f8a; display:block; margin-bottom:.4rem;" data-i18n="process1Title">1. Analyze</strong>
+      <div style="background:#fff;border:1px solid #dbe4ec;border-radius:0.75rem;padding:1.05rem;">
+        <strong style="color:#134b7f; display:block; margin-bottom:.4rem;" data-i18n="process1Title">1. Analyze</strong>
         <p style="margin:0;color:#5a6d8f;" data-i18n="process1Text">Understand the current landscape, expose bottlenecks, and identify the real reporting or planning pressure points.</p>
       </div>
-      <div style="background:#fff;border:1px solid #d7e6f4;border-radius:0.6rem;padding:1rem;">
-        <strong style="color:#0f4f8a; display:block; margin-bottom:.4rem;" data-i18n="process2Title">2. Design</strong>
+      <div style="background:#fff;border:1px solid #dbe4ec;border-radius:0.75rem;padding:1.05rem;">
+        <strong style="color:#134b7f; display:block; margin-bottom:.4rem;" data-i18n="process2Title">2. Design</strong>
         <p style="margin:0;color:#5a6d8f;" data-i18n="process2Text">Build a pragmatic solution architecture across data, planning, cloud-ready SAP, and applied intelligence.</p>
       </div>
-      <div style="background:#fff;border:1px solid #d7e6f4;border-radius:0.6rem;padding:1rem;">
-        <strong style="color:#0f4f8a; display:block; margin-bottom:.4rem;" data-i18n="process3Title">3. Implement</strong>
+      <div style="background:#fff;border:1px solid #dbe4ec;border-radius:0.75rem;padding:1.05rem;">
+        <strong style="color:#134b7f; display:block; margin-bottom:.4rem;" data-i18n="process3Title">3. Implement</strong>
         <p style="margin:0;color:#5a6d8f;" data-i18n="process3Text">Deliver in controlled steps with minimal disruption, clear ownership, and a focus on durable outcomes.</p>
       </div>
-      <div style="background:#fff;border:1px solid #d7e6f4;border-radius:0.6rem;padding:1rem;">
-        <strong style="color:#0f4f8a; display:block; margin-bottom:.4rem;" data-i18n="process4Title">4. Optimize &amp; Support</strong>
+      <div style="background:#fff;border:1px solid #dbe4ec;border-radius:0.75rem;padding:1.05rem;">
+        <strong style="color:#134b7f; display:block; margin-bottom:.4rem;" data-i18n="process4Title">4. Optimize &amp; Support</strong>
         <p style="margin:0;color:#5a6d8f;" data-i18n="process4Text">Refine performance, support adoption, and make sure the solution keeps working after the pressure is off.</p>
       </div>
     </div>
