@@ -237,6 +237,36 @@
     .card h3 { margin: 0 0 .6rem; letter-spacing: -0.015em; font-size: 1.08rem; }
     .card p { margin: 0; color: var(--gray); }
     .card ul li { margin-bottom: 0.35rem; }
+    .proof-section { padding: 0.25rem 0 3rem; }
+    .proof-wrap {
+      background: linear-gradient(135deg, #fbfcfe 0%, #f3f6f9 100%);
+      border: 1px solid #dbe3eb;
+      border-radius: 1.05rem;
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+    }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+    .proof-card {
+      background: rgba(255,255,255,.92);
+      border: 1px solid #dce4ec;
+      border-radius: 0.9rem;
+      padding: 1rem;
+    }
+    .proof-card strong {
+      display: block;
+      color: #134b7f;
+      margin-bottom: 0.35rem;
+    }
+    .proof-note {
+      margin: 0.95rem 0 0;
+      color: #5a6d8f;
+      font-size: 0.95rem;
+    }
     #contact {
       position: relative;
       overflow: hidden;
@@ -451,6 +481,28 @@
     </div>
   </section>
 
+  <section class="container proof-section">
+    <div class="proof-wrap">
+      <h2 style="color: #192639; margin: 0 0 0.55rem;" data-i18n="proofHeading">What clients value</h2>
+      <p style="margin: 0; color: #4f5f7b; max-width: 760px;" data-i18n="proofIntro">Across complex SAP programs, clients typically value a combination of calm delivery, hands-on depth, and business-focused execution.</p>
+      <div class="proof-grid">
+        <div class="proof-card">
+          <strong data-i18n="proof1Title">Calm delivery under pressure</strong>
+          <span data-i18n="proof1Text">Structured execution in critical reporting, planning, and transformation situations.</span>
+        </div>
+        <div class="proof-card">
+          <strong data-i18n="proof2Title">Hands-on SAP depth</strong>
+          <span data-i18n="proof2Text">Senior expertise across BW/4HANA, SAC, planning, analytics architecture, and connected SAP technologies.</span>
+        </div>
+        <div class="proof-card">
+          <strong data-i18n="proof3Title">Business-focused pragmatism</strong>
+          <span data-i18n="proof3Text">Solutions shaped to improve clarity, speed, decision support, and practical business value.</span>
+        </div>
+      </div>
+      <p class="proof-note" data-i18n="proofNote">Detailed written references and supporting documents are available on request.</p>
+    </div>
+  </section>
+
   <section id="about" class="container" style="padding: 2rem 0 4rem; scroll-margin-top: 100px;">
     <h2 style="color: #192639;" data-i18n="aboutHeading">About Ruben Duijn</h2>
     <div class="profile-panel" style="margin-top: 1rem;">
@@ -573,6 +625,15 @@
           result2Label: 'Stronger Planning & Forecast Confidence',
           result3Text: 'AI-supported knowledge, content, and communication workflows introduced in a controlled way to reduce friction and improve speed where it matters.',
           result3Label: 'Sharper Workflows & Lower Manual Effort',
+          proofHeading: 'What clients value',
+          proofIntro: 'Across complex SAP programs, clients typically value a combination of calm delivery, hands-on depth, and business-focused execution.',
+          proof1Title: 'Calm delivery under pressure',
+          proof1Text: 'Structured execution in critical reporting, planning, and transformation situations.',
+          proof2Title: 'Hands-on SAP depth',
+          proof2Text: 'Senior expertise across BW/4HANA, SAC, planning, analytics architecture, and connected SAP technologies.',
+          proof3Title: 'Business-focused pragmatism',
+          proof3Text: 'Solutions shaped to improve clarity, speed, decision support, and practical business value.',
+          proofNote: 'Detailed written references and supporting documents are available on request.',
           aboutHeading: 'About Ruben Duijn',
           aboutText1: 'Ruben Duijn is the Founder & Managing Director of BlueWater Strategy, a Switzerland-based SAP, analytics, and AI advisory firm. He brings more than 23 years of experience solving reporting, planning, and transformation challenges across BW, BW/4HANA, S/4HANA, SAC, BPC Embedded, IBP/IP, ABAP OO, CDS Views, HANA, Fiori, and finance-oriented analytics architecture.',
           aboutText2: 'His track record includes SAP AG, BearingPoint, EY, Sopra Steria, and selected mandates across banking, insurance, manufacturing, transport, retail, and other data-intensive environments. Clients engage him when a landscape needs sharper architecture judgment, calmer execution, and real hands-on delivery rather than generic advice.',
@@ -644,6 +705,15 @@
           result2Label: 'Stärkere Planung & mehr Forecast-Sicherheit',
           result3Text: 'KI-gestützte Wissens-, Content- und Kommunikations-Workflows werden kontrolliert eingeführt, um Reibung zu reduzieren und Geschwindigkeit dort zu erhöhen, wo es zählt.',
           result3Label: 'Schärfere Workflows & weniger manueller Aufwand',
+          proofHeading: 'Was Kundinnen und Kunden schätzen',
+          proofIntro: 'In komplexen SAP-Programmen werden vor allem ruhige Delivery, echte Hands-on-Tiefe und eine klar geschäftsorientierte Umsetzung geschätzt.',
+          proof1Title: 'Ruhige Delivery unter Druck',
+          proof1Text: 'Strukturierte Umsetzung in kritischen Reporting-, Planungs- und Transformationssituationen.',
+          proof2Title: 'Hands-on SAP-Tiefe',
+          proof2Text: 'Seniorige Expertise über BW/4HANA, SAC, Planung, Analytics-Architektur und angrenzende SAP-Technologien hinweg.',
+          proof3Title: 'Pragmatischer Business-Fokus',
+          proof3Text: 'Lösungen mit Blick auf Klarheit, Geschwindigkeit, Entscheidungsunterstützung und messbaren Nutzwert.',
+          proofNote: 'Detaillierte schriftliche Referenzen und unterstützende Unterlagen sind auf Anfrage verfügbar.',
           aboutHeading: 'Über Ruben Duijn',
           aboutText1: 'Ruben Duijn ist Gründer und Managing Director von BlueWater Strategy, einer in der Schweiz ansässigen SAP-, Analytics- und KI-Beratung. Er bringt mehr als 23 Jahre Erfahrung bei der Lösung von Reporting-, Planungs- und Transformationsherausforderungen über BW, BW/4HANA, S/4HANA, SAC, BPC Embedded, IBP/IP, ABAP OO, CDS Views, HANA, Fiori und finanzorientierte Analytics-Architekturen hinweg mit.',
           aboutText2: 'Sein Track Record umfasst SAP AG, BearingPoint, EY, Sopra Steria sowie ausgewählte Mandate in Banking, Insurance, Manufacturing, Transport, Retail und anderen datenintensiven Umfeldern. Kunden holen ihn dazu, wenn eine Landschaft mehr Architektur-Urteilskraft, ruhigere Delivery und echte hands-on Umsetzung statt generischer Beratung braucht.',
