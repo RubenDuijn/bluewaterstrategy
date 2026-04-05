@@ -133,9 +133,9 @@
       pointer-events: none;
     }
     .grid { display: grid; gap: 1.5rem; }
-    .hero-content { max-width: 560px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1; }
-    .hero h1 { font-size: clamp(2.05rem, 4.5vw, 3.1rem); line-height: 1.06; margin: 0 0 1.15rem; color: #0f2032; letter-spacing: -0.035em; }
-    .hero p { margin: 1rem 0 1.6rem; color: #526274; font-size: 1.04rem; }
+    .hero-content { max-width: 560px; display: flex; flex-direction: column; justify-content: flex-start; gap: 0.1rem; position: relative; z-index: 1; }
+    .hero h1 { font-size: clamp(2.05rem, 4.5vw, 3.1rem); line-height: 1.06; margin: 0 0 1.05rem; color: #0f2032; letter-spacing: -0.035em; }
+    .hero p { margin: 0.95rem 0 1.5rem; color: #526274; font-size: 1.04rem; }
     .button {
       display: inline-flex;
       align-items: center;
@@ -184,7 +184,7 @@
     }
     .card:hover { transform: translateY(-4px); box-shadow: 0 20px 42px rgba(15, 28, 42, 0.08); border-color: #cfd9e4; }
     .card img { width: 100%; height: 175px; object-fit: cover; object-position: center center; border-radius: .7rem; margin-bottom: 0.8rem; box-shadow: 0 14px 30px rgba(12, 34, 58, 0.10); }
-    .hero-media { display: flex; flex-direction: column; gap: 0.7rem; position: relative; z-index: 1; }
+    .hero-media { display: flex; flex-direction: column; gap: 0.8rem; position: relative; z-index: 1; justify-content: flex-start; align-self: start; }
     .hero-media .badge { margin-bottom: 0; align-self: flex-start; }
     .hero-image-wrap {
       position: relative;
@@ -201,7 +201,8 @@
       pointer-events: none;
     }
     .hero img { width: 100%; height: 400px; object-fit: cover; object-position: center 42%; border-radius: 1rem; display: block; }
-    .hero-subtext { margin: 0 0 1.05rem; color: #56677f; font-size: 1.03rem; line-height: 1.55; max-width: 58ch; }
+    .hero-subtext { margin: 0 0 1rem; color: #56677f; font-size: 1.02rem; line-height: 1.58; max-width: 60ch; }
+    .hero-caption { color: #5b6e82; letter-spacing: 0.01em; max-width: 34rem; }
     .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.25rem; }
     .button.secondary {
       background: rgba(255,255,255,.92);
@@ -231,8 +232,9 @@
       box-shadow: 0 10px 24px rgba(17, 30, 45, 0.03);
     }
     .stat-card strong { display: block; color: #134b7f; margin-bottom: 0.2rem; }
-    .hero .container.grid-2 { align-items: center; }
-    .card h3 { margin: 0 0 .6rem; letter-spacing: -0.01em; }
+    .stat-card span { color: var(--gray); font-size: 0.94rem; }
+    .hero .container.grid-2 { align-items: start; }
+    .card h3 { margin: 0 0 .6rem; letter-spacing: -0.015em; font-size: 1.08rem; }
     .card p { margin: 0; color: var(--gray); }
     .card ul li { margin-bottom: 0.35rem; }
     #contact {
@@ -258,6 +260,15 @@
       font-size: 0.9rem;
       background: #f4f6f8;
       border-top: 1px solid #dbe3eb;
+    }
+    html[lang="de"] .hero h1 {
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      max-width: 13ch;
+    }
+    html[lang="de"] .hero-subtext,
+    html[lang="de"] .availability-note,
+    html[lang="de"] .hero-caption {
+      max-width: 62ch;
     }
     @media (min-width: 800px) {
       .grid-2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center; gap: 2.5rem; }
@@ -353,7 +364,7 @@
         <div class="hero-image-wrap">
           <img src="images/Schweiz.jpg" alt="Swiss landscape in Switzerland" />
         </div>
-        <div class="hero-caption" style="font-size: 0.95rem; color: #56677f; letter-spacing: 0.01em;" data-i18n="heroCaption">Swiss-based SAP problem solving for reporting, planning, architecture, and applied intelligence</div>
+        <div class="hero-caption" style="font-size: 0.95rem;" data-i18n="heroCaption">Swiss-based SAP problem solving for reporting, planning, architecture, and applied intelligence</div>
         <div class="hero-chips">
           <span class="hero-chip">BW/4HANA</span>
           <span class="hero-chip">S/4HANA</span>
@@ -594,12 +605,12 @@
           navContact: 'Kontakt',
           navLinkedIn: 'LinkedIn ↗',
           heroBadge: 'SAP REPORTING · PLANUNG · DATENARCHITEKTUR · 23+ JAHRE',
-          heroTitle: 'Wir lösen komplexe SAP-Reporting-, Planungs- und Datenherausforderungen.',
-          heroText: 'BlueWater Strategy bringt erfahrene, hands-on Expertise in BW/4HANA, S/4HANA Analytics, SAC, BPC, SAP BTP, RAP und KI-gestützten Workflows ein. Der Fokus ist praktisch und wertorientiert: kritische Umgebungen stabilisieren, Performance verbessern und Führungsteams klarere Entscheidungsgrundlagen geben.',
+          heroTitle: 'Wir lösen komplexe SAP-Reporting- und Planungsherausforderungen.',
+          heroText: 'BlueWater Strategy bringt seniorige Hands-on-Expertise für BW/4HANA, S/4HANA Analytics, SAC, BPC, SAP BTP, RAP und KI-gestützte Workflows ein. Der Fokus ist praktisch: kritische Umgebungen stabilisieren, Performance verbessern und Führungsteams bessere Entscheidungsgrundlagen geben.',
           heroCtaPrimary: 'Beratungsgespräch buchen',
           heroCtaSecondary: 'So lösen wir Probleme',
-          availabilityNote: '<strong>Typische Situationen:</strong> Reporting-Engpässe, Neuaufstellung der Planung, BW/4HANA-Übergänge, S/4HANA-Analytics-Aktivierung und KI-gestützte Prozessverbesserung.',
-          heroCaption: 'Schweizer SAP-Problemlösung für Reporting, Planung, Architektur und Applied Intelligence',
+          availabilityNote: '<strong>Typische Situationen:</strong> Reporting-Engpässe, Planungsneuausrichtung, BW/4HANA-Übergänge, S/4HANA-Analytics und KI-gestützte Prozessverbesserung.',
+          heroCaption: 'Schweizer SAP-Problemlösung für Reporting, Planung und Architektur',
           chipAI: 'Applied Intelligence',
           solutionsHeading: 'Präzision. Expertise. Resultate.',
           solutionsIntro: 'Wenn SAP-Landschaften langsam, fragmentiert, zu manuell oder schwer vertrauenswürdig werden, steigt BlueWater Strategy mit seniorigem technischem Urteilsvermögen und ruhiger Delivery ein. Die Arbeit ist keine generische Folien-Beratung, sondern fokussierte Problemlösung über BW/4HANA, S/4HANA Analytics, SAC, BPC Embedded, IBP/IP, ABAP OO, CDS Views, HANA, Fiori, Analysis for Office, SAP BTP, RAP und finanzorientierte Reporting-Landschaften hinweg.',
