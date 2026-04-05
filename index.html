@@ -36,6 +36,8 @@
         linear-gradient(180deg, #fcfbf8 0%, var(--bg) 100%);
     }
     .container { width: min(1120px, 94%); margin: 0 auto; }
+    section { position: relative; }
+    h2 { letter-spacing: -0.02em; }
     header {
       background: rgba(255, 255, 255, 0.88);
       border-bottom: 1px solid rgba(219, 228, 239, 0.92);
@@ -60,9 +62,9 @@
     }
     nav a:hover { background: rgba(180,138,87,.10); color: var(--primary); transform: translateY(-1px); }
     .hero {
-      background: linear-gradient(135deg, #fcfbf8 0%, #f6f1ea 56%, #edf2f8 100%);
+      background: linear-gradient(135deg, #fdfbf8 0%, #f7f1e8 52%, #edf3f8 100%);
       color: var(--dark);
-      padding: 4.7rem 0 3.7rem;
+      padding: 4.9rem 0 3.9rem;
       position: relative;
       overflow: hidden;
       border-bottom: 1px solid #e8dfd3;
@@ -126,7 +128,7 @@
       box-shadow: var(--shadow);
       transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
     }
-    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-strong); border-color: #dcccb5; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 26px 56px rgba(17, 30, 45, 0.12); border-color: #dcccb5; }
     .card img { width: 100%; height: 175px; object-fit: cover; object-position: center center; border-radius: .7rem; margin-bottom: 0.8rem; box-shadow: 0 14px 30px rgba(12, 34, 58, 0.10); }
     .hero-media { display: flex; flex-direction: column; gap: 0.7rem; position: relative; z-index: 1; }
     .hero-media .badge { margin-bottom: 0; align-self: flex-start; }
@@ -157,22 +159,22 @@
     .availability-note { margin-top: 0.95rem; font-size: 0.94rem; color: #4f647d; }
     .availability-note strong { color: #13253a; }
     .profile-panel {
-      background: linear-gradient(135deg, rgba(255,255,255,.98) 0%, rgba(249,246,241,.95) 100%);
+      background: linear-gradient(135deg, rgba(255,255,255,.985) 0%, rgba(249,246,241,.95) 100%);
       border: 1px solid #e5ddd2;
-      border-radius: 1rem;
-      padding: 1.4rem;
-      box-shadow: var(--shadow);
+      border-radius: 1.05rem;
+      padding: 1.45rem;
+      box-shadow: 0 18px 42px rgba(17, 30, 45, 0.06);
     }
     .profile-grid { display: grid; gap: 1.25rem; align-items: center; }
     .profile-photo-wrap { max-width: 340px; margin: 0 auto; border-radius: 0.95rem; overflow: hidden; box-shadow: 0 22px 50px rgba(15, 40, 80, .18); background: #fff; }
     .profile-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 78% 28%; display: block; }
     .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; margin-top: 1rem; }
     .stat-card {
-      background: rgba(255,255,255,.94);
+      background: rgba(255,255,255,.95);
       border: 1px solid #e7ddd1;
-      border-radius: 0.85rem;
+      border-radius: 0.9rem;
       padding: 0.95rem 1rem;
-      box-shadow: 0 10px 24px rgba(17, 30, 45, 0.04);
+      box-shadow: 0 12px 26px rgba(17, 30, 45, 0.035);
     }
     .stat-card strong { display: block; color: #0f4f8a; margin-bottom: 0.2rem; }
     .hero .container.grid-2 { align-items: center; }
@@ -272,6 +274,7 @@
         <div style="font-size: 0.95rem; color: #56677f; letter-spacing: 0.01em;">Swiss-based SAP problem solving for reporting, planning, architecture, and applied intelligence</div>
         <div class="hero-chips">
           <span class="hero-chip">BW/4HANA</span>
+          <span class="hero-chip">S/4HANA</span>
           <span class="hero-chip">SAC &amp; BPC</span>
           <span class="hero-chip">SAP BTP / RAP</span>
           <span class="hero-chip">Applied Intelligence</span>
