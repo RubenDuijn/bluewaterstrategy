@@ -31,6 +31,7 @@
       --shadow-strong: 0 18px 42px rgba(15, 28, 42, 0.09);
     }
     html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 0.75rem; }
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -453,7 +454,7 @@
     </div>
   </header>
 
-  <section id="offer" class="hero" style="scroll-margin-top: 100px;">
+  <section id="offer" class="hero">
     <div class="container grid grid-2">
       <div class="hero-content">
         <div class="badge" data-i18n="heroBadge">SAP REPORTING · PLANNING · DATA ARCHITECTURE · 23+ YEARS</div>
@@ -481,7 +482,7 @@
     </div>
   </section>
 
-  <section id="solutions" class="features" style="scroll-margin-top: 100px;">
+  <section id="solutions" class="features">
     <div class="container">
       <h2 style="margin-bottom:0.6rem; color: #192639;" data-i18n="solutionsHeading">Precision. Expertise. Results.</h2>
       <p style="margin: 0 0 1.25rem; color: #4f5f7b; max-width: 760px;" data-i18n="solutionsIntro">When SAP environments become slow, fragmented, overly manual, or hard to trust, BlueWater Strategy steps in with senior technical judgment and calm delivery. The work is not generic slideware; it is focused problem-solving across BW/4HANA, S/4HANA analytics, SAC, BPC Embedded, IBP/IP, ABAP OO, CDS Views, HANA, Fiori, Analysis for Office, SAP BTP, RAP, and finance-oriented reporting landscapes.</p>
@@ -582,7 +583,7 @@
     </div>
   </section>
 
-  <section id="about" class="container" style="padding: 2rem 0 4rem; scroll-margin-top: 100px;">
+  <section id="about" class="container" style="padding: 2rem 0 4rem;">
     <h2 style="color: #192639;" data-i18n="aboutHeading">About Ruben Duijn</h2>
     <div class="profile-panel" style="margin-top: 1rem;">
       <div class="profile-grid">
@@ -613,7 +614,7 @@
     <p style="margin: 0 0 1.25rem; color: #4f5f7b; max-width: 760px;" data-i18n="processIntro">Complex SAP work benefits from a structured, low-drama approach: diagnose quickly, design with intent, implement carefully, and keep improving.</p>
   </div>
 
-  <section class="container" style="padding: 2rem 0; margin-top: 0; scroll-margin-top: 100px; background: #f7f9fb; border-top: 1px solid #dbe4ec; border-bottom: 1px solid #dbe4ec;">
+  <section class="container" style="padding: 2rem 0; margin-top: 0; background: #f7f9fb; border-top: 1px solid #dbe4ec; border-bottom: 1px solid #dbe4ec;">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;" class="grid">
       <div style="background:#fff;border:1px solid #dbe4ec;border-radius:0.75rem;padding:1.05rem;">
         <strong style="color:#134b7f; display:block; margin-bottom:.4rem;" data-i18n="process1Title">1. Analyze</strong>
@@ -635,7 +636,7 @@
   </section>
 
 
-  <section id="contact" style="background: white; padding: 2.5rem 0; border-top: 1px solid #e5e9f5; scroll-margin-top: 100px;">
+  <section id="contact" style="background: white; padding: 2.5rem 0; border-top: 1px solid #e5e9f5;">
     <div class="container">
       <h2 style="margin-bottom: .8rem;" data-i18n="contactHeading">Let’s solve your SAP challenge together</h2>
       <p style="color: var(--gray); margin-bottom: 1rem; max-width: 760px;" data-i18n="contactText">If you are dealing with reporting instability, planning friction, BW/4HANA architecture decisions, S/4HANA analytics enablement, or AI-supported workflow opportunities, let’s discuss the next step.</p>
