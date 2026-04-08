@@ -226,36 +226,41 @@
       padding: 1.55rem;
       box-shadow: 0 16px 38px rgba(15, 28, 42, 0.05);
     }
-    .profile-grid { display: grid; gap: 1.25rem; align-items: center; }
+    .profile-grid { display: grid; gap: 1.15rem; align-items: start; }
     .profile-photo-wrap {
       position: relative;
-      max-width: 360px;
-      margin: 0 auto;
-      padding: 0.38rem;
-      border-radius: 1.08rem;
+      max-width: 320px;
+      margin: 0;
+      padding: 0.34rem;
+      border-radius: 1.05rem;
       overflow: hidden;
       background: linear-gradient(135deg, rgba(255,255,255,.99) 0%, rgba(232,239,247,.98) 100%);
       border: 1px solid rgba(195, 208, 223, 0.95);
       box-shadow: 0 24px 56px rgba(15, 40, 80, .18);
+      aspect-ratio: 1 / 0.82;
     }
     .profile-photo-wrap::after {
       content: "";
       position: absolute;
       inset: 0;
-      border-radius: 1.08rem;
+      border-radius: 1.05rem;
       box-shadow: inset 0 0 0 1px rgba(255,255,255,.58);
       pointer-events: none;
     }
     .profile-photo {
       width: 100%;
-      aspect-ratio: 4 / 5;
+      height: 100%;
       object-fit: cover;
-      object-position: 78% 28%;
+      object-position: 66% 52%;
       display: block;
-      border-radius: 0.82rem;
+      border-radius: 0.8rem;
       filter: saturate(1.04) contrast(1.04) brightness(1.02);
       transform: scale(1.015);
       transform-origin: center;
+    }
+    .profile-copy {
+      max-width: 44rem;
+      padding-top: 0.1rem;
     }
     .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; margin-top: 1rem; }
     .stat-card {
@@ -371,7 +376,7 @@
     @media (min-width: 800px) {
       .grid-2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center; gap: 2.5rem; }
       .features .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .profile-grid { grid-template-columns: minmax(260px, 340px) minmax(0, 1fr); }
+      .profile-grid { grid-template-columns: minmax(0, 315px) minmax(0, 1fr); }
     }
     @media (max-width: 860px) {
       .menu-toggle { display: inline-flex; }
@@ -391,6 +396,9 @@
       }
       nav.is-open { display: flex; }
       nav a { width: 100%; }
+      .profile-grid { gap: 1rem; justify-items: start; }
+      .profile-photo-wrap { max-width: 300px; }
+      .profile-photo { object-position: 58% 58%; }
     }
     @media (max-width: 430px) {
       .hero { padding: 3.25rem 0 2.25rem; }
@@ -399,6 +407,8 @@
       .hero img { height: 250px; }
       .hero-chips { gap: 0.4rem; }
       .hero-chip { font-size: 0.74rem; padding: 0.24rem 0.52rem; }
+      .profile-photo-wrap { max-width: 255px; aspect-ratio: 1 / 0.8; }
+      .profile-photo { object-position: 48% 60%; }
     }
   </style>
   <script type="application/ld+json">
@@ -580,9 +590,9 @@
     <div class="profile-panel" style="margin-top: 1rem;">
       <div class="profile-grid">
         <div class="profile-photo-wrap">
-          <img class="profile-photo" src="/bluewaterstrategy-website/images/Ruben%20im%20Kl%C3%B6ntal.JPG" alt="Portrait of Ruben Duijn" />
+          <img class="profile-photo" src="/bluewaterstrategy-website/images/founder-ruben.jpg" alt="Portrait of Ruben Duijn" />
         </div>
-        <div>
+        <div class="profile-copy">
           <p style="color: #4f5f7b; max-width: 730px; margin: 0 0 1rem;" data-i18n="aboutText1">Ruben Duijn is the Founder &amp; Managing Director of BlueWater Strategy, a Switzerland-based SAP, analytics, and AI advisory firm. He brings more than 23 years of experience solving reporting, planning, and transformation challenges across BW, BW/4HANA, S/4HANA, SAC, BPC Embedded, IBP/IP, ABAP OO, CDS Views, HANA, Fiori, and finance-oriented analytics architecture.</p>
           <p style="color: #4f5f7b; max-width: 730px; margin: 0 0 1rem;" data-i18n="aboutText2">His track record includes SAP AG, BearingPoint, EY, Sopra Steria, and selected mandates across banking, insurance, manufacturing, transport, retail, and other data-intensive environments. Clients engage him when a landscape needs sharper architecture judgment, calmer execution, and real hands-on delivery rather than generic advice.</p>
           <p style="color: #4f5f7b; max-width: 730px; margin: 0;" data-i18n="aboutText3">BlueWater Strategy helps organisations modernize SAP reporting, strengthen planning capability, shape cloud-ready SAP extensions through BTP and RAP, and adopt AI where it creates clearer insight, stronger online presence, and measurable commercial value.</p>
