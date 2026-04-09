@@ -29,9 +29,12 @@
       --line: #d7e0e9;
       --shadow: 0 12px 30px rgba(15, 28, 42, 0.05);
       --shadow-strong: 0 18px 42px rgba(15, 28, 42, 0.09);
+      --anchor-offset: calc(84px + env(safe-area-inset-top, 0px));
+      --anchor-offset-tight: calc(98px + env(safe-area-inset-top, 0px));
     }
     html { scroll-behavior: smooth; }
-    section[id] { scroll-margin-top: 0; }
+    section[id] { scroll-margin-top: var(--anchor-offset); }
+    #about { scroll-margin-top: var(--anchor-offset-tight); }
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -181,6 +184,11 @@
       margin-bottom: 0.95rem;
     }
     .features { padding: 3.8rem 0 4.6rem; }
+    .features h2,
+    #about > h2,
+    #contact h2 {
+      margin-top: 0;
+    }
     .card {
       background: #fff;
       border: 1px solid #dbe2ea;
@@ -377,6 +385,10 @@
       .profile-grid { grid-template-columns: minmax(0, 315px) minmax(0, 1fr); }
     }
     @media (max-width: 860px) {
+      :root {
+        --anchor-offset: calc(92px + env(safe-area-inset-top, 0px));
+        --anchor-offset-tight: calc(108px + env(safe-area-inset-top, 0px));
+      }
       .menu-toggle { display: inline-flex; }
       .header-controls { margin-left: auto; }
       nav {
@@ -639,7 +651,7 @@
   <section id="contact" style="background: white; padding: 2.5rem 0; border-top: 1px solid #e5e9f5;">
     <div class="container">
       <h2 style="margin-bottom: .8rem;" data-i18n="contactHeading">Let’s solve your SAP challenge together</h2>
-      <p style="color: var(--gray); margin-bottom: 1rem; max-width: 760px;" data-i18n="contactText">If you are dealing with reporting instability, planning friction, BW/4HANA architecture decisions, S/4HANA analytics enablement, or AI-supported workflow opportunities, let’s discuss the next step.</p>
+      <p style="color: var(--gray); margin-bottom: 1rem; max-width: 760px;" data-i18n="contactText">If the goal is to modernize the application landscape, move onto a more future-ready technology foundation, and create a better user experience, let’s define the right next step together.</p>
       <div class="cta-row">
         <a class="button" href="mailto:RubenDuijn@gmail.com?subject=SAP%20consultation%20request" data-i18n="contactCtaPrimary">Book a consultation</a>
         <a class="button secondary" href="https://www.linkedin.com/in/ruben-duijn-b669741" target="_blank" rel="noopener" data-i18n="contactCtaSecondary">LinkedIn ↗</a>
@@ -731,7 +743,7 @@
           process4Title: '4. Optimize & Support',
           process4Text: 'Refine performance, support adoption, and make sure the solution keeps working after the pressure is off.',
           contactHeading: 'Let’s solve your SAP challenge together',
-          contactText: 'If you are dealing with reporting instability, planning friction, BW/4HANA architecture decisions, S/4HANA analytics enablement, or AI-supported workflow opportunities, let’s discuss the next step.',
+          contactText: 'If the goal is to modernize the application landscape, move onto a more future-ready technology foundation, and create a better user experience, let’s define the right next step together.',
           contactCtaPrimary: 'Book a consultation',
           contactCtaSecondary: 'LinkedIn ↗',
           contactFootnote: 'Based in Switzerland · Working across DACH and Europe · English / German / Spanish / Dutch',
@@ -813,7 +825,7 @@
           process4Title: '4. Optimieren & Unterstützen',
           process4Text: 'Performance verfeinern, Adoption unterstützen und sicherstellen, dass die Lösung auch nach dem Projektdruck funktioniert.',
           contactHeading: 'Lassen Sie uns Ihre SAP-Herausforderung gemeinsam lösen',
-          contactText: 'Wenn Sie mit instabilem Reporting, Reibung in der Planung, BW/4HANA-Architekturentscheidungen, S/4HANA-Analytics-Aktivierung oder KI-gestützten Workflow-Chancen zu tun haben, sprechen wir über den nächsten Schritt.',
+          contactText: 'Wenn das Ziel darin besteht, die Applikationslandschaft technologisch zu modernisieren, auf ein zukunftsfähigeres Fundament zu heben und die User Experience spürbar zu verbessern, definieren wir gemeinsam den richtigen nächsten Schritt.',
           contactCtaPrimary: 'Beratungsgespräch buchen',
           contactCtaSecondary: 'LinkedIn ↗',
           contactFootnote: 'Standort Schweiz · Projekte in DACH und Europa · Englisch / Deutsch / Spanisch / Niederländisch',
