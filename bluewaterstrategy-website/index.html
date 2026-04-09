@@ -360,13 +360,61 @@
     #contact .container { position: relative; z-index: 1; }
     #contact h2 { color: #13253a; }
     #contact p { color: #5d6f86 !important; }
-    footer {
-      padding: 2rem 0;
-      color: #6f7d8f;
-      text-align: center;
-      font-size: 0.9rem;
+    .contact-eyebrow {
+      display: inline-block;
+      margin: 0 0 0.6rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #36597f !important;
+      background: rgba(255,255,255,.9);
+      border: 1px solid #d7e0ea;
+      border-radius: 999px;
+      padding: 0.22rem 0.62rem;
+    }
+    .site-footer {
       background: #f4f6f8;
       border-top: 1px solid #dbe3eb;
+      padding: 1.35rem 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+      padding: 0.25rem 0 1.35rem;
+    }
+    .site-footer h3,
+    .site-footer h4 {
+      margin: 0 0 0.55rem;
+      color: #192639;
+      letter-spacing: -0.01em;
+    }
+    .site-footer p,
+    .site-footer li,
+    .site-footer a {
+      color: #5d6f86;
+      font-size: 0.94rem;
+    }
+    .site-footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.45rem;
+    }
+    .site-footer a:hover {
+      color: var(--primary);
+    }
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.9rem 0 1.35rem;
+      border-top: 1px solid #dbe3eb;
+      color: #6f7d8f;
+      font-size: 0.9rem;
     }
     html[lang="de"] .hero h1 {
       font-size: clamp(2.05rem, 4.5vw, 3.1rem);
@@ -419,6 +467,7 @@
       .hero-chip { font-size: 0.74rem; padding: 0.24rem 0.52rem; }
       .profile-photo-wrap { max-width: 255px; aspect-ratio: 1 / 0.78; }
       .profile-photo { object-position: 18% 60%; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
     }
   </style>
   <script type="application/ld+json">
@@ -650,6 +699,7 @@
 
   <section id="contact" style="background: white; padding: 2.5rem 0; border-top: 1px solid #e5e9f5;">
     <div class="container">
+      <p class="contact-eyebrow" data-i18n="contactEyebrow">READY TO TALK?</p>
       <h2 style="margin-bottom: .8rem;" data-i18n="contactHeading">Your next step in SAP — clearly defined</h2>
       <p style="color: var(--gray); margin-bottom: 1rem; max-width: 760px;" data-i18n="contactText">Whether you are modernizing your application landscape, moving to a more future-ready technology foundation, or improving user experience — we help you identify and execute the step that truly moves your business forward.</p>
       <div class="cta-row">
@@ -660,8 +710,46 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container" data-i18n="footerText">© 2026 BlueWater Strategy · Swiss-based SAP reporting, planning, and applied AI advisory.</div>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>BlueWater Strategy</h3>
+        <p data-i18n="footerIntro">Senior SAP advisory for reporting, planning, architecture, and applied AI with a calm, hands-on approach.</p>
+      </div>
+
+      <div>
+        <h4 data-i18n="footerContactHeading">Contact</h4>
+        <ul>
+          <li><a href="mailto:RubenDuijn@gmail.com?subject=SAP%20consultation%20request" data-i18n="footerEmail">Email BlueWater Strategy</a></li>
+          <li><a href="https://www.linkedin.com/in/ruben-duijn-b669741" target="_blank" rel="noopener" data-i18n="footerLinkedIn">LinkedIn ↗</a></li>
+          <li data-i18n="footerLocation">Switzerland / Remote</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-i18n="footerLinksHeading">Links</h4>
+        <ul>
+          <li><a href="#offer" data-i18n="footerLinkAdvisory">Advisory</a></li>
+          <li><a href="#solutions" data-i18n="footerLinkSolutions">Solutions</a></li>
+          <li><a href="#about" data-i18n="footerLinkProfile">Profile</a></li>
+          <li><a href="#contact" data-i18n="footerLinkContact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-i18n="footerFocusHeading">Focus</h4>
+        <ul>
+          <li data-i18n="footerFocus1">BW/4HANA · SAP BW · HANA</li>
+          <li data-i18n="footerFocus2">SAC · Planning · Analytics</li>
+          <li data-i18n="footerFocus3">SAP BTP · RAP · Applied AI</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span data-i18n="footerText">© 2026 BlueWater Strategy · Swiss-based SAP reporting, planning, and applied AI advisory.</span>
+      <span data-i18n="footerBottomTagline">23+ years · Switzerland-based · Hands-on SAP delivery</span>
+    </div>
   </footer>
 
   <script>
@@ -742,12 +830,28 @@
           process3Text: 'Deliver in controlled steps with minimal disruption, clear ownership, and a focus on durable outcomes.',
           process4Title: '4. Optimize & Support',
           process4Text: 'Refine performance, support adoption, and make sure the solution keeps working after the pressure is off.',
+          contactEyebrow: 'Ready to talk?',
           contactHeading: 'Your next step in SAP — clearly defined',
           contactText: 'Whether you are modernizing your application landscape, moving to a more future-ready technology foundation, or improving user experience — we help you identify and execute the step that truly moves your business forward.',
           contactCtaPrimary: 'Book a consultation',
           contactCtaSecondary: 'LinkedIn ↗',
           contactFootnote: 'Based in Switzerland · Working across DACH and Europe · English / German / Spanish / Dutch',
-          footerText: '© 2026 BlueWater Strategy · Swiss-based SAP reporting, planning, and applied AI advisory.'
+          footerIntro: 'Senior SAP advisory for reporting, planning, architecture, and applied AI with a calm, hands-on approach.',
+          footerContactHeading: 'Contact',
+          footerEmail: 'Email BlueWater Strategy',
+          footerLinkedIn: 'LinkedIn ↗',
+          footerLocation: 'Switzerland / Remote',
+          footerLinksHeading: 'Links',
+          footerLinkAdvisory: 'Advisory',
+          footerLinkSolutions: 'Solutions',
+          footerLinkProfile: 'Profile',
+          footerLinkContact: 'Contact',
+          footerFocusHeading: 'Focus',
+          footerFocus1: 'BW/4HANA · SAP BW · HANA',
+          footerFocus2: 'SAC · Planning · Analytics',
+          footerFocus3: 'SAP BTP · RAP · Applied AI',
+          footerText: '© 2026 BlueWater Strategy · Swiss-based SAP reporting, planning, and applied AI advisory.',
+          footerBottomTagline: '23+ years · Switzerland-based · Hands-on SAP delivery'
         },
         de: {
           title: 'BlueWater Strategy | Komplexe SAP-Reporting- und Planungsherausforderungen lösen',
@@ -824,12 +928,28 @@
           process3Text: 'In kontrollierten Schritten mit minimaler Störung, klarer Verantwortung und Fokus auf nachhaltige Ergebnisse liefern.',
           process4Title: '4. Optimieren & Unterstützen',
           process4Text: 'Performance verfeinern, Adoption unterstützen und sicherstellen, dass die Lösung auch nach dem Projektdruck funktioniert.',
+          contactEyebrow: 'Bereit zum Austausch?',
           contactHeading: 'Ihr nächster Schritt in SAP — klar definiert',
           contactText: 'Ob Sie Ihre Applikationslandschaft modernisieren, auf ein zukunftsfähigeres Technologiefundament wechseln oder die User Experience verbessern möchten — wir helfen Ihnen, den Schritt zu identifizieren und umzusetzen, der Ihr Business wirklich voranbringt.',
           contactCtaPrimary: 'Beratungsgespräch buchen',
           contactCtaSecondary: 'LinkedIn ↗',
           contactFootnote: 'Standort Schweiz · Projekte in DACH und Europa · Englisch / Deutsch / Spanisch / Niederländisch',
-          footerText: '© 2026 BlueWater Strategy · Schweizer Beratung für SAP Reporting, Planung und angewandte KI.'
+          footerIntro: 'Seniorige SAP-Beratung für Reporting, Planung, Architektur und angewandte KI — ruhig, hands-on und präzise in der Umsetzung.',
+          footerContactHeading: 'Kontakt',
+          footerEmail: 'BlueWater Strategy per E-Mail',
+          footerLinkedIn: 'LinkedIn ↗',
+          footerLocation: 'Schweiz / Remote',
+          footerLinksHeading: 'Links',
+          footerLinkAdvisory: 'Angebot',
+          footerLinkSolutions: 'Lösungen',
+          footerLinkProfile: 'Profil',
+          footerLinkContact: 'Kontakt',
+          footerFocusHeading: 'Fokus',
+          footerFocus1: 'BW/4HANA · SAP BW · HANA',
+          footerFocus2: 'SAC · Planung · Analytics',
+          footerFocus3: 'SAP BTP · RAP · Angewandte KI',
+          footerText: '© 2026 BlueWater Strategy · Schweizer Beratung für SAP Reporting, Planung und angewandte KI.',
+          footerBottomTagline: '23+ Jahre · Standort Schweiz · Hands-on SAP Delivery'
         }
       };
 
